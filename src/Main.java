@@ -22,6 +22,10 @@ public class Main {
         empList.sort(new MyComparator());
         System.out.println("Sorting based on Comparator implementation logic \n" + empList);
 
-
+        // Sorting using Lambda expression
+        empList.sort((a, b) -> {
+            return b.dept.compareTo(a.dept);
+        });
+        System.out.println("Sorting based on Lambda Expression \n" + empList);
     }
 }
